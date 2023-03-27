@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+#attribution {
+    font: caption;
+    position: absolute;
+    bottom: 20px;
+    color: white;
+}
+
+#indication {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 38%;
+}
+
+#indication p {
+    font-size: x-large;
+}
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+.website {
+    width: 100vw;
+    height: 100vh;
+    padding: 45px;
+    background-image: linear-gradient(to bottom right, #D6E6FF, #5c8ddb, rgb(162, 96, 216), rgb(189, 162, 211));
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.link {
+    display: flex;
+    height: 200px;
+    width: 160px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background-color: darkblue;
+    border-radius: 15px;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.411), 0 6px 20px 0 rgba(0, 0, 0, 0.603);
+}
+
+.link:hover {
+    background-color: darkgreen;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.title {
+    align-self: normal;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    color: aliceblue;
+}
+
+a:link {
+    text-decoration: none;
+}
