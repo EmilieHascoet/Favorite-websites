@@ -4,6 +4,9 @@ body {
     font-family: sans-serif;
     overflow: hidden;
 }
+* {
+    box-sizing: border-box;
+}
 
 #attribution {
     font: caption;
@@ -17,26 +20,39 @@ body {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 38%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#url {
+    width: 130px;
+    height: auto;
+}
+
+#flexBox {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 #indication p {
     font-size: x-large;
+    padding-top: 5px;
+    margin: 0;
 }
 
-/* ::-webkit-scrollbar {
-    display: none;
-} */
-
-* {
-    box-sizing: border-box;
+#add {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
 }
 
 .website {
     width: 100vw;
     height: 100vh;
     padding: 45px;
-    background-image: linear-gradient(to bottom right, #D6E6FF, #5c8ddb, rgb(162, 96, 216), rgb(189, 162, 211));
+    background-image: linear-gradient(to bottom right, #acc3e7, #5c8ddb, #a260d8, #bda2d3);
     display: flex;
     justify-content: center;
     align-content: flex-start;
@@ -62,7 +78,7 @@ body {
     background-color: darkgreen;
 }
 
-img {
+.link img {
     width: 120px;
     height: 120px;
     border-radius: 15px;
@@ -81,3 +97,10 @@ img {
 a:link {
     text-decoration: none;
 }
+
+/* .newLink {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background-color: black;
+} */
