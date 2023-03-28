@@ -1,3 +1,22 @@
+:root {
+    /* size */
+    --width-link : 140px;
+    --height-link : calc(30px + var(--width-link));
+    --size-link-img : calc(var(--width-link)*0.7);
+
+    /* color */
+    --border-color-link : orange;
+    --background-color-link : aliceblue;
+    --color-link-title : black;
+
+    /* Arrière plan */
+    --background-angle : 160deg;
+    --backgroud-color-1 : #acc3e7;
+    --backgroud-color-2 : #5c8ddb;
+    --backgroud-color-3 : #a260d8;
+    --backgroud-color-4 : #bda2d3;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -52,7 +71,7 @@ body {
     width: 100vw;
     height: 100vh;
     padding: 45px;
-    background-image: linear-gradient(to bottom right, #acc3e7, #5c8ddb, #a260d8, #bda2d3);
+    background-image: linear-gradient(var(--background-angle), var(--backgroud-color-1), var(--backgroud-color-2), var(--backgroud-color-3), var(--backgroud-color-4));
     display: flex;
     justify-content: center;
     align-content: flex-start;
@@ -62,25 +81,25 @@ body {
 
 .link {
     display: flex;
-    height: 200px;
-    width: 160px;
+    width: var(--width-link);
+    height: var(--height-link);
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 15px;
-    background-color: darkblue;
+    background-color: var(--background-color-link);
     border-radius: 15px;
+    box-shadow: 0px 7px var(--border-color-link), 0 5px 8px rgba(0, 0, 0, 0.411), 0 6px 20px rgba(0, 0, 0, 0.603);
+    border: 2px solid var(--border-color-link);
     transition: all 0.3s ease-out;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.411), 0 6px 20px 0 rgba(0, 0, 0, 0.603);
 }
 
 .link:hover {
-    background-color: darkgreen;
+    background-color: var(--backgroud-color-1);
 }
 
 .link img {
-    width: 120px;
-    height: 120px;
+    width: var(--size-link-img);
+    height: var(--size-link-img);
     border-radius: 15px;
     object-fit: cover;
 }
@@ -91,7 +110,9 @@ body {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; 
-    color: aliceblue;
+    font-size: 14px;
+    color: var(--color-link-title);
+    padding: 0 15px;
 }
 
 a:link {
