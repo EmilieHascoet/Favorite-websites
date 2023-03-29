@@ -12,23 +12,36 @@
 <body>
     <div class="website" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
         <a href="https://clearbit.com" id="attribution">Logos provided by Clearbit</a>
-        <div id="addLink">
+        <div id="addLink" class="frameLink">
             <h2>Ajouter un lien</h2>
             <form autocomplete="off">
                 <label for="title">Nom :</label><br>
                 <input type="text" id="title"><br>
                 <label for="url">Url :</label><br>
-                <input type="text" id="url" required><br>
-                <div id="addLink-flexBox">
-                    <input type="submit" value="Valider">
-                    <input type="button" value="Annuler" onclick="hideAddLink()">
+                <input type="text" id="url" placeholder="Entrer une url valide" required><br>
+                <div class="frameLink-flexBox">
+                    <button type="submit" id="valider">Valider</button>
+                    <button type="button" onclick="closeAddLink()">Annuler</button>
+                </div>
+              </form> 
+        </div>
+        <div id="changeLink" class="frameLink">
+            <h2>Modifier un lien</h2>
+            <form autocomplete="off">
+                <label for="title">Nom :</label><br>
+                <input type="text" id="title"><br>
+                <label for="url">Url :</label><br>
+                <input type="text" id="url" placeholder="Entrer une url valide" required><br>
+                <div class="frameLink-flexBox">
+                    <button type="submit" id="valider">Valider</button>
+                    <button type="button" onclick="closechangeLink()">Annuler</button>
                 </div>
               </form> 
         </div>
         <div id="indication">
-            <img id="url" src="images/logo-url.png" alt="logo url">
+            <img id="img-url" src="images/logo-url.png" alt="logo url">
             <div id="indication-flexBox">
-                <img type="button" id="add" src="images/logo-add.png" alt="logo add" onclick="showAddLink()">
+                <img type="button" id="add" src="images/logo-add.png" alt="logo add" onclick="openAddLink(null, null)">
                 <p>Glisser / ajouter des urls</p>
             </div>
         </div>
